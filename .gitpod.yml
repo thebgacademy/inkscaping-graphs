@@ -1,5 +1,6 @@
 image: gitpod/workspace-full-vnc
 
+tasks:
 - name: SETUP - UPDATE AND INSTALL
   init: |
     sudo apt-get update
