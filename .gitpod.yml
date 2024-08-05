@@ -17,7 +17,7 @@ tasks:
   command: |
     echo "Hello there - Welcome to GitPod"
     echo "To launch Inkscape, type 'inkscape'"
-    echo "You might need to go to ports and click 6080"
+    echo "You might need to then go to ports and click the link on the line starting with 6080"
 
 ports:
   - port: 5900
