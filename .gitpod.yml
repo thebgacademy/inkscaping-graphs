@@ -1,8 +1,22 @@
 image: gitpod/workspace-full-vnc
 
-- name: SETUP
+- name: SETUP - UPDATE AND INSTALL
   init: |
+    sudo apt-get update
+    sudo apt install inkscape
+    gp sync-done bundle
+
+- name: SETUP - DOWNLOAD GRAPHS
+  init: |
+    echo "I'm a placeholder :)"
+    gp sync-done bundle
+
+- name: MAIN
+  init: gp sync-await bundle # Wait for previous 'inits' to complete
+  command: |
     echo "Hello there - Welcome to GitPod"
+    echo "To launch Inkscape, type 'inkscape'"
+    echo "You might need to go to ports and click 6080"
 
 ports:
   - port: 5900
