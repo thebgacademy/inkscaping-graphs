@@ -3,6 +3,8 @@ image: gitpod/workspace-full-vnc
 tasks:
 - name: SETUP - UPDATE AND INSTALL
   init: |
+    sudo add-apt-repository universe -y
+    sudo add-apt-repository ppa:inkscape.dev/stable -y
     sudo apt-get update -y
     sudo apt install inkscape -y
     gp sync-done bundle
